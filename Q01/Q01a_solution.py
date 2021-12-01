@@ -27,7 +27,7 @@ def count_increases(x, verbose = True):
     n_zer = sum([d == 0 for d in diffs])
     
     if verbose:
-        print(f"Length = {len(x)}")
+        print(f"Length    = {len(x):5.0f}")
         print(f"Increases = {n_pos:5.0f}")
         print(f"Decreases = {n_neg:5.0f}")
         print(f"No change = {n_zer:5.0f}")
@@ -36,7 +36,11 @@ def count_increases(x, verbose = True):
 
 # %% Example test
 # Test on example, answer should be 7
-count_increases([199, 200, 208, 210, 200, 207, 240, 269, 260, 263], verbose = True)
+if __name__ == '__main__':
+    print("\n" + "Chosen solution (example):")
+    count_increases([199, 200, 208, 210, 200, 207, 240, 269, 260, 263], verbose = True)
     
 # %% Calculate answer
-count_increases(values, verbose = True)
+if __name__ == '__main__':
+    print("\n" + "Chosen solution (non-example):")
+    count_increases(values, verbose = True)
