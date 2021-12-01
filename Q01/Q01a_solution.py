@@ -11,7 +11,7 @@ Modified:  Wed Dec  1 15:01:09 2021
 import numpy as np
 
 # %% Read values from file
-with open('Q01-data.txt', 'r') as file:
+with open('Q01_data.txt', 'r') as file:
     lines = file.readlines()
     values = [int(l.rstrip("\n")) for l in lines]
     
