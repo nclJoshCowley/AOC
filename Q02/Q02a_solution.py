@@ -31,6 +31,8 @@ def input_to_horiz_depth(x):
             depth[i] = values[i]
         elif actions[i] == "up":
             depth[i] = -values[i]
+        else:
+            raise ValueError
             
     return horiz, depth
 
