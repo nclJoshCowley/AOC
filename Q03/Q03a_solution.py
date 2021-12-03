@@ -3,8 +3,6 @@
 """
 @author:   Josh Cowley
 @email:    j.cowley1@ncl.ac.uk
-Created:   
-Modified:  
 """
 
 # %% Dependencies
