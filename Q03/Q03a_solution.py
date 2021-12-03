@@ -35,7 +35,7 @@ def get_rate(x, is_epsilon):
 
 # %%
 def binary_list_to_int(b):
-    return int("".join(str(bi) for bi in b), 2)
+    return int("".join(str(int(bi)) for bi in b), 2)
 
 # %% Combine into script-like function
 def part_a(x):
