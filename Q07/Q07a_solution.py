@@ -7,7 +7,6 @@
 
 # %% Dependencies
 import numpy as np
-# import functools
     
 # %% Read from file
 positions_eg = [16,1,2,0,4,2,7,1,2,14]
@@ -15,15 +14,14 @@ positions_eg = [16,1,2,0,4,2,7,1,2,14]
 with open('Q07_data.txt', 'r') as file:
     positions = [int(i) for i in file.read().split(',')]
 
-# %%
+# %% Define (summed) distance between vector x and candidate n
 def dist(x, n):
     return sum([abs(xi - n) for xi in x])
 
-# %%
+# %% Brute force by looping through all possible 'n'
 def brute_force(x, dist_fn):
     out = [dist_fn(x, ni) for ni in range(max(x))]
     return np.argmin(out), out
-        
 
 # %%
 if __name__ == '__main__':
