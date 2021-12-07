@@ -20,16 +20,16 @@ def dist(x, n):
     return sum([abs(xi - n) for xi in x])
 
 # %%
-def brute_force(x):
-    out = [dist(x, ni) for ni in range(max(x))]
+def brute_force(x, dist_fn):
+    out = [dist_fn(x, ni) for ni in range(max(x))]
     return np.argmin(out), out
         
 
 # %%
 if __name__ == '__main__':
-    arg, lst = brute_force(positions_eg)
+    arg, lst = brute_force(positions_eg, dist)
     print(f"Position = {arg:4.0f}, Fuel = {lst[arg]:4.0f}")
 
-    arg, lst = brute_force(positions)
+    arg, lst = brute_force(positions, dist)
     print(f"Position = {arg:4.0f}, Fuel = {lst[arg]:4.0f}")
     
